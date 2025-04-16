@@ -1,0 +1,358 @@
+2025-04-15 18:14:44 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 6804 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 18:14:44 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 18:14:44 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-15 18:14:44 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-15 18:14:46 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 18:14:46 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2025-04-15 18:14:47 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 18:14:47 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:14:47 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 18:14:47 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 18:14:47 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 18:14:47 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2357 ms
+2025-04-15 18:14:47 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 18:14:47 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-15 18:14:47 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 18:14:48 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 18:14:48 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 18:14:48 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@19e30890
+2025-04-15 18:14:48 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 18:14:49 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 18:14:49 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 18:14:49 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 18:14:50 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 18:14:50 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 18:14:50 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 18:14:51 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-15 18:14:51 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 18:14:51 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 18:14:51 INFO  [restartedMain] com.app1.app1.App1Application - Started App1Application in 7.432 seconds (process running for 8.606)
+2025-04-15 18:14:55 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-15 18:14:55 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-15 18:14:55 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-15 18:14:55 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 18:15:02 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 18:15:10 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 18:15:17 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 18:15:21 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 18:15:31 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:30:32 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:30:48 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:30:50 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:31:54 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:33:45 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:11 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:11 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:12 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:12 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:12 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:12 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:34:16 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:36:40 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:36:40 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:39:28 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:13 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:16 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:16 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:16 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:17 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:41:17 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 19:45:18 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-15 19:45:18 INFO  [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-15 19:45:18 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:45:18 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-15 19:45:18 INFO  [Thread-5] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:45:18 INFO  [Thread-5] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 19:45:18 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 19:45:18 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 19:45:18 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 6804 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 19:45:18 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 19:45:19 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:45:19 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 19:45:19 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 19:45:19 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 699 ms
+2025-04-15 19:45:19 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 19:45:19 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 19:45:19 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-04-15 19:45:19 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d8e0d89
+2025-04-15 19:45:19 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-04-15 19:45:19 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 19:45:19 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 19:45:19 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 19:45:19 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 19:45:19 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 19:45:20 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 19:45:20 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-15 19:45:20 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 19:45:20 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 19:45:20 INFO  [restartedMain] com.app1.app1.App1Application - Started App1Application in 1.759 seconds (process running for 5427.256)
+2025-04-15 19:45:20 INFO  [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-04-15 20:12:59 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 4240 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 20:12:59 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 20:12:59 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-15 20:12:59 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-15 20:13:00 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 20:13:00 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interface.
+2025-04-15 20:13:01 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 20:13:01 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 20:13:01 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 20:13:01 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 20:13:01 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 20:13:01 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2525 ms
+2025-04-15 20:13:02 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 20:13:02 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-15 20:13:02 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 20:13:02 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 20:13:03 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 20:13:03 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67ed11bc
+2025-04-15 20:13:03 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 20:13:03 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 20:13:03 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 20:13:03 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 20:13:04 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 20:13:04 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 20:13:05 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 20:13:05 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-15 20:13:05 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 20:13:05 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 20:13:05 INFO  [restartedMain] com.app1.app1.App1Application - Started App1Application in 7.609 seconds (process running for 8.239)
+2025-04-15 20:13:06 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-15 20:13:06 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-15 20:13:06 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2025-04-15 20:13:06 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:13:08 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:13:21 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:18:00 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:18:05 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:19:17 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:19:18 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:19:18 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:19:19 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:19:43 INFO  [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-15 20:19:43 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-15 20:19:43 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 20:19:43 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 20:19:44 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 20:19:55 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 13004 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 20:19:55 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 20:19:55 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-15 20:19:55 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-15 20:19:56 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 20:19:57 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2025-04-15 20:19:57 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 20:19:57 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 20:19:57 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 20:19:57 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 20:19:57 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 20:19:57 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1999 ms
+2025-04-15 20:19:58 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 20:19:58 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-15 20:19:58 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 20:19:58 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 20:19:58 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 20:19:59 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e76d173
+2025-04-15 20:19:59 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 20:19:59 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 20:19:59 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 20:19:59 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 20:20:00 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 20:20:00 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 20:20:01 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 20:20:01 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-15 20:20:01 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 20:20:01 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 20:20:01 INFO  [restartedMain] com.app1.app1.App1Application - Started App1Application in 6.747 seconds (process running for 7.803)
+2025-04-15 20:20:28 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-15 20:20:28 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-15 20:20:28 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-15 20:20:28 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:36 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:40 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:42 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:43 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:45 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:51 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:53 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:53 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:53 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:54 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:54 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:54 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:54 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:22:57 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:23:01 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:06 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:11 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:11 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:11 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:11 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:38:12 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:22 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:23 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:23 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:23 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:24 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:24 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:24 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:24 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:25 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:25 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:25 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:39:39 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:48 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed /13 deleteUser endpoint Complete.
+2025-04-15 20:39:48 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:49 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed /12 deleteUser endpoint Complete.
+2025-04-15 20:39:49 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:50 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed /11 deleteUser endpoint Complete.
+2025-04-15 20:39:50 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:51 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed /10 deleteUser endpoint Complete.
+2025-04-15 20:39:51 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:52 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed /9 deleteUser endpoint Complete.
+2025-04-15 20:39:52 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:52 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed /8 deleteUser endpoint Complete.
+2025-04-15 20:39:52 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:53 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed /7 deleteUser endpoint Complete.
+2025-04-15 20:39:53 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:53 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed /6 deleteUser endpoint Complete.
+2025-04-15 20:39:53 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:56 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed /5 deleteUser endpoint Complete.
+2025-04-15 20:39:56 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:39:57 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed /4 deleteUser endpoint Complete.
+2025-04-15 20:39:57 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:17 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:21 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:22 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:22 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:22 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:22 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:40:23 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:41:41 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:41:41 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:58:26 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:58:39 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:58:51 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 20:59:51 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Post CreateUser endpoint complete.
+2025-04-15 20:59:51 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:14:15 INFO  [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-04-15 21:14:15 INFO  [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-04-15 21:14:15 INFO  [tomcat-shutdown] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-04-15 21:14:15 INFO  [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-04-15 21:14:15 INFO  [Thread-5] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-04-15 21:14:15 INFO  [Thread-5] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 21:14:15 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-04-15 21:14:15 INFO  [Thread-5] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-04-15 21:14:16 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 13004 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 21:14:16 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 21:14:16 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 21:14:16 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interface.
+2025-04-15 21:14:16 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 21:14:16 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 21:14:16 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 21:14:16 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 21:14:16 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 21:14:16 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 702 ms
+2025-04-15 21:14:16 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 21:14:16 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 21:14:16 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 21:14:16 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-04-15 21:14:17 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@540cb240
+2025-04-15 21:14:17 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-04-15 21:14:17 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 21:14:17 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 21:14:17 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 21:14:17 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 21:14:17 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 21:14:17 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 21:18:54 INFO  [restartedMain] com.app1.app1.App1Application - Starting App1Application using Java 24 with PID 11428 (C:\Users\krian\Desktop\backend\target\classes started by krian in C:\Users\krian\Desktop\backend)
+2025-04-15 21:18:54 INFO  [restartedMain] com.app1.app1.App1Application - No active profile set, falling back to 1 default profile: "default"
+2025-04-15 21:18:54 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-04-15 21:18:54 INFO  [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-04-15 21:18:56 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-04-15 21:18:56 INFO  [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interface.
+2025-04-15 21:18:57 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-04-15 21:18:57 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-04-15 21:18:57 INFO  [restartedMain] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-04-15 21:18:57 INFO  [restartedMain] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-04-15 21:18:57 INFO  [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-04-15 21:18:57 INFO  [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2471 ms
+2025-04-15 21:18:57 INFO  [restartedMain] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-04-15 21:18:57 INFO  [restartedMain] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.11.Final
+2025-04-15 21:18:57 INFO  [restartedMain] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-04-15 21:18:58 INFO  [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-04-15 21:18:58 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-04-15 21:18:58 INFO  [restartedMain] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3dbb7aca
+2025-04-15 21:18:58 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-04-15 21:18:58 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-04-15 21:18:58 WARN  [restartedMain] org.hibernate.orm.deprecation - HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-04-15 21:18:58 INFO  [restartedMain] o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-04-15 21:18:59 INFO  [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-04-15 21:19:00 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-04-15 21:19:00 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-04-15 21:19:01 INFO  [restartedMain] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-04-15 21:19:01 INFO  [restartedMain] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-04-15 21:19:01 INFO  [restartedMain] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-04-15 21:19:01 INFO  [restartedMain] com.app1.app1.App1Application - Started App1Application in 7.445 seconds (process running for 8.522)
+2025-04-15 21:19:03 INFO  [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-04-15 21:19:03 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-04-15 21:19:03 INFO  [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-04-15 21:19:03 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:11 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:11 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-6] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-7] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-8] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-9] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-10] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:12 INFO  [http-nio-8080-exec-1] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:13 INFO  [http-nio-8080-exec-3] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:13 INFO  [http-nio-8080-exec-2] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:13 INFO  [http-nio-8080-exec-4] c.a.app1.controller.UserController - Accessed / endpoint complete.
+2025-04-15 21:19:13 INFO  [http-nio-8080-exec-5] c.a.app1.controller.UserController - Accessed / endpoint complete.
