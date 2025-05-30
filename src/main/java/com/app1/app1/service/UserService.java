@@ -1,26 +1,19 @@
 package com.app1.app1.service;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.stereotype.Service;
-
 import com.app1.app1.model.User;
-import com.app1.app1.repository.UserRepository;
 
-@Service
-public class UserService {
+import org.springframework.data.domain.Page;
 
-    private final UserRepository userRepository;
+import java.util.List;
+import java.util.Optional;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+public interface UserService {
 
-    public Page<User> getUsers(int page, int size, String sortBy) {
-        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy).ascending());
-        return userRepository.findAll(pageable);
-    }
+    List<User> getAllUsers();
 
+    Page<User> getUsers(int page, int size, String sortBy);
+
+    Optional<User> getUserById(Long id);
+
+    User updateUser(Long id, User userDetails);
 }
