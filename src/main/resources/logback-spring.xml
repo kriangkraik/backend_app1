@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOG_PATH" value="logs"/>
-    <property name="LOG_FILE" value="${LOG_PATH}/application.log"/>
+    <property name="LOG_PATH" value="logs" />
+    <property name="LOG_FILE" value="${LOG_PATH}/application.log" />
 
     <!-- Console Logging -->
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
@@ -26,8 +26,8 @@
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="Console"/>
-        <appender-ref ref="FileAppender"/>
+        <appender-ref ref="Console" />
+        <appender-ref ref="FileAppender" />
     </root>
 
 </configuration>

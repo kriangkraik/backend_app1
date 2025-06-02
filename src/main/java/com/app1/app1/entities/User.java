@@ -1,4 +1,6 @@
-package com.app1.app1.model;
+package com.app1.app1.entities;
+
+import java.util.Objects;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
@@ -54,7 +56,7 @@ public class User {
     @PrePersist
     @PreUpdate
     private void formatPhoneNumber() {
-        if (this.phoneNumber != null) {
+        if (Objects.nonNull(this.phoneNumber)) {
             this.phoneNumber = this.phoneNumber.replaceAll("[^0-9]", "");
         }
     }

@@ -1,9 +1,10 @@
 package com.app1.app1.controller;
 
-import com.app1.app1.model.User;
-import com.app1.app1.repository.UserRepository;
+import com.app1.app1.entities.User;
+import com.app1.app1.exceptions.UserAlreadyExistException;
 import com.app1.app1.service.UserService;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
@@ -23,19 +24,11 @@ public class UserController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
-    private final UserRepository userRepository;
-
     private final UserService userService;
 
     @GetMapping("/all")
     public ResponseEntity<List<User>> getUsers() {
         return ResponseEntity.ok(userService.getAllUsers());
-    }
-
-    @PostMapping
-    public ResponseEntity<User> createUser(@Validated @RequestBody User user) {
-        LOGGER.info("Post CreateUser endpoint complete.");
-        return ResponseEntity.ok(userRepository.save(user));
     }
 
     @GetMapping("/{id}")
@@ -52,6 +45,12 @@ public class UserController {
         return userService.getUsers(page, size, sortBy);
     }
 
+    @PostMapping
+    public ResponseEntity<User> createUser(@Validated @RequestBody User user) throws UserAlreadyExistException {
+        LOGGER.info("Post CreateUser endpoint complete.");
+        return ResponseEntity.ok(userService.createUser(user));
+    }
+
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         LOGGER.info("Accessed /{} updateUser endpoint complete.", id);
@@ -61,17 +60,13 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
-        return userRepository.findById(id)
-                .map(user -> {
-                    try {
-                        userRepository.delete(user);
-                        LOGGER.info("Accessed /{} deleteUser endpoint Complete.", id);
-                        return ResponseEntity.noContent().<Void>build();
-                    } catch (Exception e) {
-                        LOGGER.error("Error occurred while deleting user with id " + id, e);
-                        return ResponseEntity.status(500).<Void>build();
-                    }
-                })
-                .orElse(ResponseEntity.notFound().build());
+        try {
+            userService.deleteUser(id);
+            return ResponseEntity.noContent().build(); // 204 No Content
+        } catch (EntityNotFoundException e) {
+            return ResponseEntity.notFound().build(); // 404 Not Found
+        }
+
     }
+
 }

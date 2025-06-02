@@ -1,21 +1,26 @@
 package com.app1.app1.service;
 
-import com.app1.app1.model.User;
+import com.app1.app1.entities.User;
+import com.app1.app1.exceptions.UserAlreadyExistException;
+import com.app1.app1.exceptions.UserExceptions;
 import com.app1.app1.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@Primary
 @RequiredArgsConstructor
 public class UserServiceImp implements UserService {
     private final UserRepository userRepository;
@@ -29,10 +34,19 @@ public class UserServiceImp implements UserService {
         return userRepository.findAll(pageable);
     }
 
-    public Optional<User> getUserById(@PathVariable Long id) {
+    public Optional<User> getUserById(Long id) {
         return userRepository.findById(id);
     }
 
+    @Transactional(rollbackOn = UserAlreadyExistException.class)
+    public User createUser(User newUser) throws UserAlreadyExistException {
+        if (userRepository.existsByEmail(newUser.getEmail())) {
+            throw new UserAlreadyExistException("User already exists with email: " + newUser.getEmail());
+        }
+        return userRepository.save(newUser);
+    }
+
+    @Transactional(rollbackOn = UserExceptions.class)
     public User updateUser(Long id, User userDetails) {
         return userRepository.findById(id).map(user -> {
             Optional.ofNullable(userDetails.getFirstname()).ifPresent(user::setFirstname);
@@ -49,4 +63,13 @@ public class UserServiceImp implements UserService {
             return userRepository.save(user);
         }).orElseThrow(() -> new EntityNotFoundException("User not found with id " + id));
     }
+
+    @Transactional
+    public void deleteUser(Long id) {
+        if (!userRepository.existsById(id)) {
+            throw new EntityNotFoundException("User not found with id " + id);
+        }
+        userRepository.deleteById(id);
+    }
+
 }
