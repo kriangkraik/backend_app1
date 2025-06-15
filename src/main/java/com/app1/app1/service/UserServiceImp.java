@@ -38,7 +38,6 @@ public class UserServiceImp implements UserService {
         return userRepository.findById(id);
     }
 
-    @Transactional(rollbackOn = UserAlreadyExistException.class)
     public User createUser(User newUser) throws UserAlreadyExistException {
         if (userRepository.existsByEmail(newUser.getEmail())) {
             throw new UserAlreadyExistException("User already exists with email: " + newUser.getEmail());
@@ -46,7 +45,6 @@ public class UserServiceImp implements UserService {
         return userRepository.save(newUser);
     }
 
-    @Transactional(rollbackOn = UserExceptions.class)
     public User updateUser(Long id, User userDetails) {
         return userRepository.findById(id).map(user -> {
             Optional.ofNullable(userDetails.getFirstname()).ifPresent(user::setFirstname);
@@ -64,7 +62,6 @@ public class UserServiceImp implements UserService {
         }).orElseThrow(() -> new EntityNotFoundException("User not found with id " + id));
     }
 
-    @Transactional
     public void deleteUser(Long id) {
         if (!userRepository.existsById(id)) {
             throw new EntityNotFoundException("User not found with id " + id);
