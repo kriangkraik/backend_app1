@@ -3,9 +3,12 @@ package com.app1.app1.product.service;
 import com.app1.app1.product.entity.Product;
 import com.app1.app1.product.exceptions.ProductAlreadyExistException;
 import com.app1.app1.product.repository.ProductRepository;
+
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -43,6 +46,12 @@ public class ProductServiceImp implements ProductService {
                 .orElseThrow(() -> new IllegalArgumentException("Product not found with ID: " + id));
     }
 
+    // Find Product By Code.
+    public Product geProductByCode(String code) {
+        return productRepository.findByCode(code)
+                .orElseThrow(() -> new IllegalArgumentException("Product not found with Code: " + code));
+    }
+
     // Update Product.
     public Product updateProduct(Long id, Product updatedProduct) {
         Product existing = productRepository.findById(id)
@@ -54,6 +63,11 @@ public class ProductServiceImp implements ProductService {
         existing.setCode(updatedProduct.getCode() != null ? updatedProduct.getCode() : existing.getCode());
 
         return productRepository.save(existing);
+    }
+
+    @Transactional
+    public int updatePriceByCode(BigDecimal price, String code) {
+        return productRepository.updatePriceByCode(price, code);
     }
 
     // Delete Product By ID.

@@ -11,6 +11,8 @@ public interface ProductService {
 
     Product getProductById(Long id);
 
+    Product geProductByCode(String code);
+
     Product updateProduct(Long id, Product updatedProduct);
 
     void deleteProductById(Long id);
