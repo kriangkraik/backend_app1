@@ -1,19 +1,15 @@
-package com.app1.app1.service;
+package com.app1.app1.user.services;
 
-import com.app1.app1.entities.User;
-import com.app1.app1.exceptions.UserAlreadyExistException;
-import com.app1.app1.exceptions.UserExceptions;
-import com.app1.app1.repository.UserRepository;
+import com.app1.app1.user.entity.User;
+import com.app1.app1.user.exceptions.UserAlreadyExistException;
+import com.app1.app1.user.repository.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-
 import org.springframework.stereotype.Service;
 
 import java.util.List;

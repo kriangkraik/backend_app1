@@ -1,13 +1,18 @@
-package com.app1.app1.entities;
+package com.app1.app1.user.entity;
+
+import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
 
-import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
-import lombok.*;
-
 @Entity
-
+@Table(name = "users")
 @Data
 @AllArgsConstructor
 @RequiredArgsConstructor

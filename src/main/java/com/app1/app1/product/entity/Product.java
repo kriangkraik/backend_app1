@@ -1,4 +1,4 @@
-package com.app1.app1.entities;
+package com.app1.app1.product.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;

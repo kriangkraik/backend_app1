@@ -1,20 +1,18 @@
-package com.app1.app1.controller;
+package com.app1.app1.user.controller;
 
-import com.app1.app1.entities.User;
-import com.app1.app1.exceptions.UserAlreadyExistException;
-import com.app1.app1.service.UserService;
-
+import com.app1.app1.user.entity.User;
+import com.app1.app1.user.exceptions.UserAlreadyExistException;
+import com.app1.app1.user.services.UserService;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
-
-import java.util.List;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/user")
@@ -66,7 +64,6 @@ public class UserController {
         } catch (EntityNotFoundException e) {
             return ResponseEntity.notFound().build(); // 404 Not Found
         }
-
     }
 
 }

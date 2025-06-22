@@ -1,4 +1,4 @@
-package com.app1.app1.exceptions;
+package com.app1.app1.user.exceptions;
 
 public class UserExceptions extends RuntimeException {
     /**
@@ -20,9 +20,8 @@ public class UserExceptions extends RuntimeException {
     /**
      * Constructs a new <code>UserExceptions</code> exception with the
      * specified detail message.
-     * 
-     * @param message
-     *                the detail message.
+     *
+     * @param message the detail message.
      */
     public UserExceptions(String message, Throwable cause) {
         super(message, cause);

@@ -126,7 +126,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
 	... 24 common frames omitted
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.app1.app1.service.UserServiceImp] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@79351699]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.app1.app1.user.services.UserServiceImp] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@79351699]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:476)
@@ -217,9 +217,9 @@ Caused by: java.lang.ClassNotFoundException: List
 2025-05-30 20:25:35 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:25:35 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-05-30 20:25:35 WARN  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 2025-05-30 20:25:35 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:25:35 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
 2025-05-30 20:25:35 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
@@ -229,9 +229,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-05-30 20:25:35 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
@@ -255,9 +255,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
@@ -307,9 +307,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 2025-05-30 20:28:01 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:28:02 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-05-30 20:28:02 WARN  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 2025-05-30 20:28:02 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:28:02 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-30 20:28:02 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -319,9 +319,9 @@ com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-05-30 20:28:02 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
@@ -345,9 +345,9 @@ com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
@@ -397,9 +397,9 @@ com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
 2025-05-30 20:28:49 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:28:49 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-05-30 20:28:49 WARN  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 2025-05-30 20:28:49 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:28:49 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-30 20:28:49 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -409,9 +409,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-05-30 20:28:49 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
@@ -435,9 +435,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers(int, int, String)
+com.app1.app1.user.controller.UserController#getUsers(int, int, String)
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers() mapped.
+com.app1.app1.user.controller.UserController#getUsers() mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)
@@ -487,9 +487,9 @@ com.app1.app1.controller.UserController#getUsers() mapped.
 2025-05-30 20:31:00 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:31:00 WARN  [restartedMain] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2025-05-30 20:31:00 WARN  [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 2025-05-30 20:31:00 INFO  [restartedMain] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-05-30 20:31:00 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-05-30 20:31:00 INFO  [restartedMain] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
@@ -499,9 +499,9 @@ com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
 2025-05-30 20:31:01 ERROR [restartedMain] o.s.boot.SpringApplication - Application run failed
 org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1812)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523)
@@ -525,9 +525,9 @@ com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
 	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50)
 Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.app1.app1.controller.UserController#getUsers()
+com.app1.app1.user.controller.UserController#getUsers()
 to {GET [/api/v1/user]}: There is already 'userController' bean method
-com.app1.app1.controller.UserController#getUsers(int, int, String) mapped.
+com.app1.app1.user.controller.UserController#getUsers(int, int, String) mapped.
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:676)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:637)
 	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:331)

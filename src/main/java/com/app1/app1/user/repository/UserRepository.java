@@ -1,8 +1,7 @@
-package com.app1.app1.repository;
+package com.app1.app1.user.repository;
 
+import com.app1.app1.user.entity.User;
 import org.springframework.stereotype.Repository;
-
-import com.app1.app1.entities.User;
 
 @Repository
 public interface UserRepository extends PagingAndSortingUserRepository<User, Long> {
