@@ -1,6 +1,7 @@
 package com.app1.app1.product.service;
 
 import com.app1.app1.product.entity.Product;
+import com.app1.app1.product.exceptions.ProductAlreadyExistException;
 import com.app1.app1.product.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,10 +17,18 @@ public class ProductServiceImp implements ProductService {
 
     private final ProductRepository productRepository;
 
+    // Create New Production.
     public Product createProduct(Product product) {
         product.setCode(Optional.ofNullable(product.getCode())
                 .filter(code -> !code.isEmpty())
                 .orElseGet(this::generateUniqueCode));
+
+        Optional.of(product.getCode())
+                .filter(productRepository::existsByCode)
+                .ifPresent(code -> {
+                    throw new ProductAlreadyExistException("Product code already exists: " + code);
+                });
+
         return productRepository.save(product);
     }
 
@@ -28,7 +37,7 @@ public class ProductServiceImp implements ProductService {
         return productRepository.findAll();
     }
 
-    // Find Product By Id
+    // Find Product By Id.
     public Product getProductById(Long id) {
         return productRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Product not found with ID: " + id));
