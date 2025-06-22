@@ -4,8 +4,8 @@ import com.app1.app1.product.entity.Product;
 import com.app1.app1.product.exceptions.ProductAlreadyExistException;
 import com.app1.app1.product.repository.ProductRepository;
 
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -22,15 +22,16 @@ public class ProductServiceImp implements ProductService {
 
     // Create New Production.
     public Product createProduct(Product product) {
-        product.setCode(Optional.ofNullable(product.getCode())
-                .filter(code -> !code.isEmpty())
-                .orElseGet(this::generateUniqueCode));
+        // Set code if not provided
+        String code = Optional.ofNullable(product.getCode())
+                .filter(c -> !c.isEmpty())
+                .orElseGet(this::generateUniqueCode);
+        product.setCode(code);
 
-        Optional.of(product.getCode())
-                .filter(productRepository::existsByCode)
-                .ifPresent(code -> {
-                    throw new ProductAlreadyExistException("Product code already exists: " + code);
-                });
+        // Validate code uniqueness
+        if (productRepository.existsByCode(code)) {
+            throw new ProductAlreadyExistException("Product code already exists: " + code);
+        }
 
         return productRepository.save(product);
     }
@@ -65,9 +66,8 @@ public class ProductServiceImp implements ProductService {
         return productRepository.save(existing);
     }
 
-    @Transactional
     public int updatePriceByCode(BigDecimal price, String code) {
-        return productRepository.updatePriceByCode(price, code);
+        return productRepository.updatePriceByCode(code, price);
     }
 
     // Delete Product By ID.

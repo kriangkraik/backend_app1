@@ -17,6 +17,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
+    @Version
+    private Integer version;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

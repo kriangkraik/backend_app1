@@ -2,9 +2,10 @@ package com.app1.app1.product.repository;
 
 import com.app1.app1.product.entity.Product;
 
+import jakarta.transaction.Transactional;
+
 import java.math.BigDecimal;
 import java.util.Optional;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,13 +14,14 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
+
     // ตรวจสอบว่ามีรหัสสินค้านี้อยู่แล้วหรือไม่
     boolean existsByCode(String code);
 
-    // ลบสินค้าตามรหัส
+    // ลบสินค้าตามรหัส (Transaction should be handled in service layer)
     void deleteByCode(String code);
 
-    // ค้นหาสินค้าจากรหัส (ใช้สำหรับกรณีการแสดงผล)
+    // ค้นหาสินค้าจากรหัส
     Optional<Product> findByCode(String code);
 
     // ค้นหาด้วยชื่อสินค้าแบบบางส่วน(ignorecase)
@@ -28,16 +30,26 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     // ค้นหาสินค้าภายใต้ช่วงราคา
     Page<Product> findByPriceBetween(BigDecimal min, BigDecimal max, Pageable pageable);
 
-    @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%'))")
+    // ค้นหาด้วย keyword (JPQL - works with all databases)
+    @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     Page<Product> searchByKeyword(@Param("keyword") String keyword, Pageable pageable);
 
-    // ใช้ Native SQL (บางระบบต้องใช้ เช่น Full-Text Search)
-    @Query(value = "SELECT * FROM products WHERE MATCH(name, description) AGAINST (:keyword IN NATURAL LANGUAGE MODE)", nativeQuery = true)
+    // Full-text search (only for MySQL/MariaDB with FULLTEXT index)
+    // Make sure you have FULLTEXT index: CREATE FULLTEXT INDEX ft_products ON
+    // products(name, description);
+    @Query(value = "SELECT * FROM products WHERE MATCH(name, description) AGAINST (:keyword IN NATURAL LANGUAGE MODE)", countQuery = "SELECT COUNT(*) FROM products WHERE MATCH(name, description) AGAINST (:keyword IN NATURAL LANGUAGE MODE)", nativeQuery = true)
     Page<Product> fullTextSearch(@Param("keyword") String keyword, Pageable pageable);
 
-    // อัปเดตราคาแบบ bulk (ตัวอย่างการใช้ @Modifying)
+    // อัปเดตราคาแบบ bulk
+    @Transactional
     @Modifying
     @Query("UPDATE Product p SET p.price = :price WHERE p.code = :code")
-    int updatePriceByCode(@Param("price") BigDecimal price, @Param("code") String code);
+    int updatePriceByCode(@Param("code") String code, @Param("price") BigDecimal price);
 
+    // Additional useful queries
+    @Query("SELECT p FROM Product p WHERE p.price >= :minPrice")
+    Page<Product> findByPriceGreaterThanEqual(@Param("minPrice") BigDecimal minPrice, Pageable pageable);
+
+    @Query("SELECT p FROM Product p WHERE p.price <= :maxPrice")
+    Page<Product> findByPriceLessThanEqual(@Param("maxPrice") BigDecimal maxPrice, Pageable pageable);
 }
