@@ -54,8 +54,7 @@ public class ProductServiceImp implements ProductService {
                         product -> productRepository.deleteById(id),
                         () -> {
                             throw new IllegalArgumentException("Product not found with ID: " + id);
-                        }
-                );
+                        });
     }
 
     // Delete Product By Code.
@@ -67,6 +66,8 @@ public class ProductServiceImp implements ProductService {
     }
 
     private String generateUniqueCode() {
-        return Stream.generate(() -> UUID.randomUUID().toString().replace("-", "").substring(0, 12).toUpperCase()).filter(code -> !productRepository.existsByCode(code)).findFirst().orElseThrow(() -> new IllegalStateException("Failed to generate unique code"));
+        return Stream.generate(() -> UUID.randomUUID().toString().replace("-", "").substring(0, 12).toUpperCase())
+                .filter(code -> !productRepository.existsByCode(code)).findFirst()
+                .orElseThrow(() -> new IllegalStateException("Failed to generate unique code"));
     }
 }

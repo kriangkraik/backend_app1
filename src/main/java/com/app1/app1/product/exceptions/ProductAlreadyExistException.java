@@ -6,7 +6,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.CONFLICT) // Optional
 public class ProductAlreadyExistException extends RuntimeException {
     /**
-     * Constructs a new ProductAlreadyExistException with null as its detail message.
+     * Constructs a new ProductAlreadyExistException with null as its detail
+     * message.
      */
     public ProductAlreadyExistException() {
         super();
@@ -22,7 +23,8 @@ public class ProductAlreadyExistException extends RuntimeException {
     }
 
     /**
-     * Constructs a new ProductAlreadyExistException with the specified detail message.
+     * Constructs a new ProductAlreadyExistException with the specified detail
+     * message.
      *
      * @param message the detail message.
      */
@@ -31,7 +33,8 @@ public class ProductAlreadyExistException extends RuntimeException {
     }
 
     /**
-     * Constructs a new ProductAlreadyExistException with the specified detail message and cause.
+     * Constructs a new ProductAlreadyExistException with the specified detail
+     * message and cause.
      *
      * @param message the detail message.
      * @param cause   the cause of the exception.
