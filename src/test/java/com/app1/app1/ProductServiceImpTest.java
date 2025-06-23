@@ -19,7 +19,7 @@ import com.app1.app1.product.exceptions.ProductAlreadyExistException;
 import com.app1.app1.product.repository.ProductRepository;
 import com.app1.app1.product.service.ProductServiceImp;
 
-public class ProductServiceImpTest {
+class ProductServiceImpTest {
 
     @Mock
     private ProductRepository productRepository;
