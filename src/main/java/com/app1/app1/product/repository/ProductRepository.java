@@ -34,12 +34,6 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     @Query("SELECT p FROM Product p WHERE LOWER(p.name) LIKE LOWER(CONCAT('%', :keyword, '%')) OR LOWER(p.description) LIKE LOWER(CONCAT('%', :keyword, '%'))")
     Page<Product> searchByKeyword(@Param("keyword") String keyword, Pageable pageable);
 
-    // Full-text search (only for MySQL/MariaDB with FULLTEXT index)
-    // Make sure you have FULLTEXT index: CREATE FULLTEXT INDEX ft_products ON
-    // products(name, description);
-    @Query(value = "SELECT * FROM products WHERE MATCH(name, description) AGAINST (:keyword IN NATURAL LANGUAGE MODE)", countQuery = "SELECT COUNT(*) FROM products WHERE MATCH(name, description) AGAINST (:keyword IN NATURAL LANGUAGE MODE)", nativeQuery = true)
-    Page<Product> fullTextSearch(@Param("keyword") String keyword, Pageable pageable);
-
     // อัปเดตราคาแบบ bulk
     @Transactional
     @Modifying

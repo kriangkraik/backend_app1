@@ -22,13 +22,13 @@ public class ProductServiceImp implements ProductService {
 
     // Create New Production.
     public Product createProduct(Product product) {
-        // Set code if not provided
+        // Set code if not provided.
         String code = Optional.ofNullable(product.getCode())
                 .filter(c -> !c.isEmpty())
                 .orElseGet(this::generateUniqueCode);
         product.setCode(code);
 
-        // Validate code uniqueness
+        // Validate code uniqueness.
         if (productRepository.existsByCode(code)) {
             throw new ProductAlreadyExistException("Product code already exists: " + code);
         }
@@ -74,7 +74,7 @@ public class ProductServiceImp implements ProductService {
     public void deleteProductById(Long id) {
         productRepository.findById(id)
                 .ifPresentOrElse(
-                        product -> productRepository.deleteById(id),
+                        _ -> productRepository.deleteById(id),
                         () -> {
                             throw new IllegalArgumentException("Product not found with ID: " + id);
                         });
