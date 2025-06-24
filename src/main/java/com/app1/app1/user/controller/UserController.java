@@ -26,6 +26,7 @@ public class UserController {
 
     @GetMapping("/all")
     public ResponseEntity<List<User>> getUsers() {
+        LOGGER.info("getUsers endpoint complete.");
         return ResponseEntity.ok(userService.getAllUsers());
     }
 
@@ -40,6 +41,7 @@ public class UserController {
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "5") int size,
             @RequestParam(defaultValue = "id") String sortBy) {
+        LOGGER.info("getUsersPage endpoint complete.");
         return userService.getUsers(page, size, sortBy);
     }
 
@@ -60,9 +62,11 @@ public class UserController {
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         try {
             userService.deleteUser(id);
-            return ResponseEntity.noContent().build(); // 204 No Content
+            LOGGER.info("Accessed /{} deleteUser endpoint complete.", id);
+            return ResponseEntity.noContent().build();
         } catch (EntityNotFoundException e) {
-            return ResponseEntity.notFound().build(); // 404 Not Found
+            LOGGER.info("Accessed /{} deleteUser endpoint not complete. Exception: {}", id, e.getMessage());
+            return ResponseEntity.notFound().build();
         }
     }
 

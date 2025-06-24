@@ -21,5 +21,3 @@ logging:
     root: INFO
     com:
       example: DEBUG
-err:
-  required: is required.

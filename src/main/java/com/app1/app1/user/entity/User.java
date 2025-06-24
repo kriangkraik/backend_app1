@@ -21,12 +21,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "First name {err.required}")
+    @NotBlank(message = "First name is required.")
     @Column(nullable = false)
     @Size(max = 50, message = "Firstname must be less than 50 characters")
     private String firstname;
 
-    @NotBlank(message = "Last name {err.required}")
+    @NotBlank(message = "Last name is required.")
     @Column(nullable = false)
     @Size(max = 50, message = "Lastname must be less than 50 characters")
     private String lastname;
@@ -43,18 +43,23 @@ public class User {
     @Pattern(regexp = "^[0-9]{10}$", message = "Phone number must be 10 digits")
     private String phoneNumber;
 
+    @NotBlank(message = "Address is required")
     @Size(max = 255)
     private String address;
 
+    @NotBlank(message = "City is required")
     @Size(max = 50)
     private String city;
 
+    @NotBlank(message = "State is required")
     @Size(max = 50)
     private String state;
 
+    @NotBlank(message = "Country is required")
     @Size(max = 50)
     private String country;
 
+    @NotBlank(message = "ZipCode is required")
     @Pattern(regexp = "^[0-9]{1,5}$", message = "Zip code must be numeric and up to 5 digits")
     private String zipCode;
 
