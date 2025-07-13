@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOG_PATH" value="logs"/>
-    <property name="LOG_FILE" value="${LOG_PATH}/application.log"/>
+    <property name="LOG_PATH" value="logs" />
+    <property name="LOG_FILE" value="${LOG_PATH}/application.log" />
 
     <!-- Console Logging -->
     <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
@@ -20,14 +20,18 @@
             <!-- keep 30 days' worth of history -->
             <maxHistory>30</maxHistory>
         </rollingPolicy>
-        <encoder>
+        <!-- <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n</pattern>
+        </encoder> -->
+        <encoder>
+            <!-- เพิ่ม [%X{clientIp}] ไว้ตำแหน่งที่ต้องการแสดง IP -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - [%X{clientIp}] %msg%n</pattern>
         </encoder>
     </appender>
 
     <root level="INFO">
-        <appender-ref ref="Console"/>
-        <appender-ref ref="FileAppender"/>
+        <appender-ref ref="Console" />
+        <appender-ref ref="FileAppender" />
     </root>
 
 </configuration>

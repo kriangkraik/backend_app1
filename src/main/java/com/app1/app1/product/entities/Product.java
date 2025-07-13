@@ -1,4 +1,4 @@
-package com.app1.app1.product.entity;
+package com.app1.app1.product.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
@@ -21,6 +21,8 @@ public class Product {
     private static final int MAX_CODE_LENGTH = 12;
     private static final int MAX_NAME_LENGTH = 50;
     private static final int MAX_DESCRIPTION_LENGTH = 100;
+    private static final int MAX_PRECISION_PRICE_LENGTH = 10;
+    private static final int MAX_SCALE_PRICE_LENGTH = 2;
 
     @Version
     private Integer version;
@@ -30,7 +32,7 @@ public class Product {
     private Long id;
 
     @Size(max = 12, message = "Code must not exceed 12 characters")
-    @Column(name = "code", nullable = false, length = MAX_CODE_LENGTH, unique = true)
+    @Column(name = "code", nullable = false, unique = true, length = MAX_CODE_LENGTH)
     private String code;
 
     @NotBlank(message = "Name is required")
@@ -45,6 +47,6 @@ public class Product {
 
     @NotNull(message = "Price is required")
     @DecimalMin(value = "0.00", message = "Price must be non-negative")
-    @Column(name = "price", nullable = false, precision = 10, scale = 2)
+    @Column(name = "price", nullable = false, precision = MAX_PRECISION_PRICE_LENGTH, scale = MAX_SCALE_PRICE_LENGTH)
     private BigDecimal price;
 }

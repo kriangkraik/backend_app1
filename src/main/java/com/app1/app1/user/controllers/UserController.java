@@ -1,6 +1,6 @@
-package com.app1.app1.user.controller;
+package com.app1.app1.user.controllers;
 
-import com.app1.app1.user.entity.User;
+import com.app1.app1.user.entities.User;
 import com.app1.app1.user.exceptions.UserAlreadyExistException;
 import com.app1.app1.user.services.UserService;
 import jakarta.persistence.EntityNotFoundException;

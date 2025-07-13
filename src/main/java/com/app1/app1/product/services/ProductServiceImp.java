@@ -1,8 +1,7 @@
-package com.app1.app1.product.service;
+package com.app1.app1.product.services;
 
-import com.app1.app1.product.entity.Product;
 import com.app1.app1.product.exceptions.ProductAlreadyExistException;
-import com.app1.app1.product.repository.ProductRepository;
+import com.app1.app1.product.repositories.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
 

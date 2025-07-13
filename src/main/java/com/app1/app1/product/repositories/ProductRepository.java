@@ -1,4 +1,4 @@
-package com.app1.app1.product.repository;
+package com.app1.app1.product.repositories;
 
 import com.app1.app1.product.entity.Product;
 

@@ -1,8 +1,8 @@
 package com.app1.app1.user.services;
 
-import com.app1.app1.user.entity.User;
+import com.app1.app1.user.entities.User;
 import com.app1.app1.user.exceptions.UserAlreadyExistException;
-import com.app1.app1.user.repository.UserRepository;
+import com.app1.app1.user.repositories.UserRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Primary;
@@ -19,6 +19,7 @@ import java.util.Optional;
 @Primary
 @RequiredArgsConstructor
 public class UserServiceImp implements UserService {
+    
     private final UserRepository userRepository;
 
     public List<User> getAllUsers() {

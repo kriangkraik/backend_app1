@@ -1,4 +1,4 @@
-package com.app1.app1.product.service;
+package com.app1.app1.product.services;
 
 import java.util.List;
 
