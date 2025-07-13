@@ -17,18 +17,26 @@ import java.util.Objects;
 @AllArgsConstructor
 @RequiredArgsConstructor
 public class User {
+
+    private static final int MAX_FIRSTNAME_LENGTH = 50;
+    private static final int MAX_LASTNAME_LENGTH = 50;
+    private static final int MAX_ADDRESS_LENGTH = 255;
+    private static final int MAX_CITY_LENGTH = 50;
+    private static final int MAX_STATE_LENGTH = 50;
+    private static final int MAX_COUNTRY_LENGTH = 50;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank(message = "First name is required.")
     @Column(nullable = false)
-    @Size(max = 50, message = "Firstname must be less than 50 characters")
+    @Size(max = MAX_FIRSTNAME_LENGTH, message = "Firstname must be less than 50 characters")
     private String firstname;
 
     @NotBlank(message = "Last name is required.")
     @Column(nullable = false)
-    @Size(max = 50, message = "Lastname must be less than 50 characters")
+    @Size(max = MAX_LASTNAME_LENGTH, message = "Lastname must be less than 50 characters")
     private String lastname;
 
     @Email(message = "Email should be valid")
@@ -44,19 +52,19 @@ public class User {
     private String phoneNumber;
 
     @NotBlank(message = "Address is required")
-    @Size(max = 255)
+    @Size(max = MAX_ADDRESS_LENGTH)
     private String address;
 
     @NotBlank(message = "City is required")
-    @Size(max = 50)
+    @Size(max = MAX_CITY_LENGTH)
     private String city;
 
     @NotBlank(message = "State is required")
-    @Size(max = 50)
+    @Size(max = MAX_STATE_LENGTH)
     private String state;
 
     @NotBlank(message = "Country is required")
-    @Size(max = 50)
+    @Size(max = MAX_COUNTRY_LENGTH)
     private String country;
 
     @NotBlank(message = "ZipCode is required")
