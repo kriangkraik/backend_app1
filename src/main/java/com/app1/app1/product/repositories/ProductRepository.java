@@ -1,6 +1,6 @@
 package com.app1.app1.product.repositories;
 
-import com.app1.app1.product.entity.Product;
+
 
 import jakarta.transaction.Transactional;
 
@@ -12,6 +12,8 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import com.app1.app1.product.entities.Product;
 
 @Repository
 public interface ProductRepository extends PagingAndSortingProductRepository<Product, Long> {

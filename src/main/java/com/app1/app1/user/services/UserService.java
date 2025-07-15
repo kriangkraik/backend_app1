@@ -1,6 +1,6 @@
 package com.app1.app1.user.services;
 
-import com.app1.app1.user.entity.User;
+import com.app1.app1.user.entities.User;
 import com.app1.app1.user.exceptions.UserAlreadyExistException;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.data.domain.Page;

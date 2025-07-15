@@ -1,6 +1,8 @@
 package com.app1.app1.product.services;
 
+import com.app1.app1.product.entities.Product;
 import com.app1.app1.product.exceptions.ProductAlreadyExistException;
+import com.app1.app1.product.exceptions.ProductNotFoundException;
 import com.app1.app1.product.repositories.ProductRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -43,19 +45,19 @@ public class ProductServiceImp implements ProductService {
     // Find Product By Id.
     public Product getProductById(Long id) {
         return productRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Product not found with ID: " + id));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with ID: " + id));
     }
 
     // Find Product By Code.
     public Product geProductByCode(String code) {
         return productRepository.findByCode(code)
-                .orElseThrow(() -> new IllegalArgumentException("Product not found with Code: " + code));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with Code: " + code));
     }
 
     // Update Product.
     public Product updateProduct(Long id, Product updatedProduct) {
         Product existing = productRepository.findById(id)
-                .orElseThrow(() -> new IllegalArgumentException("Product not found with ID: " + id));
+                .orElseThrow(() -> new ProductNotFoundException("Product not found with ID: " + id));
 
         existing.setName(updatedProduct.getName());
         existing.setPrice(updatedProduct.getPrice());
@@ -75,14 +77,14 @@ public class ProductServiceImp implements ProductService {
                 .ifPresentOrElse(
                         _ -> productRepository.deleteById(id),
                         () -> {
-                            throw new IllegalArgumentException("Product not found with ID: " + id);
+                            throw new ProductNotFoundException("Product not found with ID: " + id);
                         });
     }
 
     // Delete Product By Code.
     public void deleteProductByCode(String code) {
         if (!productRepository.existsByCode(code)) {
-            throw new IllegalArgumentException("Product not found with CODE: " + code);
+            throw new ProductNotFoundException("Product not found with CODE: " + code);
         }
         productRepository.deleteByCode(code);
     }
